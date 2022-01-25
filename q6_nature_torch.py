@@ -94,7 +94,8 @@ class NatureQN(Linear):
 
         ##############################################################
         ################ YOUR CODE HERE - 4-5 lines lines ################
-        states = state.permute(0,3,1,2)
+        #states = state.permute(0,3,1,2)
+        states = torch.transpose(state, 1, 3)
         if network == "q_network":
             out = self.q_network(states)
         elif network == "target_network":

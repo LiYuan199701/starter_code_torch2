@@ -11,6 +11,9 @@ from utils.replay_buffer import ReplayBuffer
 from utils.preprocess import greyscale
 from utils.wrappers import PreproWrapper, MaxAndSkipEnv
 
+import logging
+logging.getLogger('matplotlib.font_manager').disabled = True
+
 class Timer():
 
     def __init__(self, enabled=False) -> None:
